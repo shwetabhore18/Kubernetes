@@ -1,12 +1,12 @@
-apivarsion: v1
-Kind: Pod
+apiVarsion: v1
+kind: Pod
 metadata:
   name: nginx
-  label:
+  labels:
     app: nginx
 spec:
   containers:
-  -name: nginxpod
-  image: nginx:latst
+   - name: nginxpod
+     image: nginx:latest
   ports:
-  -containers: 80
+    -containerPort: 80
