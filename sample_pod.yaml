@@ -1,0 +1,12 @@
+apivarsion: v1
+Kind: Pod
+metadata:
+  name: nginx
+  label:
+    app: nginx
+spec:
+  containers:
+  -name: nginxpod
+  image: nginx:latst
+  ports:
+  -containers: 80
