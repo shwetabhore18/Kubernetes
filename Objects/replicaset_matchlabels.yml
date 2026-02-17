@@ -6,7 +6,7 @@ metadata:
     app: rs-matchlabels
 spec:
   selector:
-    matchlabels:
+    matchLabels:
       app: nginx-matchlabels
   replicas: 3
   template:
