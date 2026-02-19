@@ -23,4 +23,4 @@ spec:
         - containers: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: 12345
+          value: "12345"
