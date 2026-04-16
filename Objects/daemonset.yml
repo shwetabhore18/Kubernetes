@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind:  DaemonSet
 metadata:
-  name: cwatchagent
+  name: nginx-daemonset
   labels:
-    app: ds
+    tier: frontend
 spec:
-  selector:
-    matchLabels:
-      app: cwatchagent
-
   template:
     metadata:
-      name: cwatchagent
       labels:
-        app: cwatchagent
+        tier: frontend
+      name: nginx
     spec:
       containers:
-      - name: nginx
-        image: amazon/cloudwatch-agent
+      - image: nginx
+        name: nginx
         ports:
-        -   containerPort: 80
+        - containerPort: 80
+  selector:
+    matchLabels:
+      tier: frontend
